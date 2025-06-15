@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Word Scramble Game</title>
+    
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Set viewport for responsive design on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Import the JavaScript files: word list and game logic -->
+    <script src="js/word.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
+  </head>
+  
+  <body>
+    <!-- Main container for the game -->
+    <div class="container">
+        <!-- Title of the game -->
+        <h2>Word Scramble</h2>
+        
+        <!-- Content area for the game elements -->
+        <div class="content">
+            
+            <!-- Display the scrambled word here -->
+            <p class="word"></p>
+            
+            <!-- Section to show hint and timer -->
+            <div class="details">
+                
+                <!-- Hint text with a span inside to dynamically insert hint from JS -->
+                <p class="hint">Hint: <span></span></p>
+                
+                <!-- Timer showing how much time is left -->
+                <p class="time">Time Left: <span><b>30</b>s</span></p>
+            </div>
+            
+            <!-- Input field for user to type their guessed word -->
+            <input type="text" spellcheck="false" placeholder="Enter a valid word">
+
+            <div class="game-controls">
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            <div class="stats">
+                <p>Score: <span id="score">0</span></p>
+                <p>Streak: <span id="streak">0</span></p>
+            </div>
+        </div>
+
+            
+            <!-- Buttons for refreshing the word and checking the user's answer -->
+            <div class="buttons">
+                <button class="refresh-word">Refresh Word</button>
+                <button class="check-word">Check Word</button>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+/* Import Poppins font from Google Fonts with weights 400, 500, and 600 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Reset default styles for all elements */
+*{
+  margin: 0;          /* Remove default margins */
+  padding: 0;         /* Remove default padding */
+  box-sizing: border-box; /* Include padding/border in element's total width/height */
+  font-family: 'Poppins', sans-serif; /* Set default font to Poppins */
+}
+
+/* Body styling - centers content vertically and horizontally */
+body{
+  display: flex;
+  padding: 0 10px;    /* Small horizontal padding */  /* 10px padding on left/right sides */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  min-height: 100vh;  /* Full viewport height */
+  background: #5372F0; /* Blue background color */
+}
+
+/* Main container styling */
+.container{
+  width: 440px;       /* Fixed width */
+  border-radius: 7px; /* Rounded corners */
+  background: #fff;   /* White background */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08); /* Subtle shadow */
+}
+
+/* Container heading style */
+.container h2{
+  font-size: 25px;
+  font-weight: 500;   /* Medium weight */
+  padding: 16px 25px; /* Vertical and horizontal padding */
+  border-bottom: 1px solid #ccc; /* Light gray bottom border */
+}
+
+/* Content area within container */
+.container .content{
+  margin: 25px 20px 35px; /* Top, sides, bottom margin */
+}
+
+/* The scrambled word players need to solve */
+.content .word {
+  user-select: none;          /* Prevents text selection */
+  font-size: 33px;            /* Large text */
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 24px;       /* Big space between letters */
+  margin-right: -24px;        /* Fixes extra space from letter-spacing */
+  word-break: break-all;      /* Allows long words to wrap */
+  text-transform: uppercase;  /* Shows all letters in uppercase */
+}
+
+/* Details section styling */
+.content .details{
+  margin: 25px 0 20px; /* Top, no sides, bottom margin */
+}
+
+/* Paragraphs in details section */
+.details p{
+  font-size: 18px;
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+/* Bold text in details */
+.details p b{
+  font-weight: 500; /* Semi-bold */
+}
+
+/* Where players type their answers */
+.content input {
+  width: 100%;                /* Full width of container */
+  height: 60px;               /* Tall input field */
+  outline: none;              /* Removes default focus outline */
+  padding: 0 16px;            /* Horizontal padding */
+  font-size: 18px;
+  border-radius: 5px;         /* Slightly rounded corners */
+  border: 1px solid #bfbfbf;  /* Light gray border */
+}
+
+/* Style when input is focused (clicked on) */
+.content input:focus {
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.08); /* Subtle glow */
+}
+
+/* Placeholder text styling */
+.content input::placeholder {
+  color: #aaa;                /* Light gray placeholder */
+}
+
+/* Placeholder when input is focused */
+.content input:focus::placeholder {
+  color: #bfbfbf;             /* Slightly darker gray */
+}
+/* Container for both buttons */
+.content .buttons {
+  display: flex;              /* Side-by-side buttons */
+  margin-top: 20px;           /* Space from input field */
+  justify-content: space-between; /* Puts maximum space between buttons */
+}
+
+/* Base button styles */
+.buttons button {
+  border: none;              /* Remove default borders */
+  outline: none;             /* Remove focus outline */
+  color: #fff;               /* White text */
+  cursor: pointer;           /* Shows hand cursor on hover */
+  padding: 15px 0;           /* Tall buttons */
+  font-size: 17px;
+  border-radius: 5px;        /* Rounded corners */
+  width: calc(100% / 2 - 8px); /* Each button takes half width minus gap */
+  transition: all 0.3s ease; /* Smooth hover/focus effects */
+}
+
+/* Button press effect */
+.buttons button:active {
+  transform: scale(0.97);    /* Slight shrink when clicked */
+}
+
+/* Refresh button specific styles */
+.buttons .refresh-word {
+  background: #6C757D;       /* Gray color */
+}
+.buttons .refresh-word:hover {
+  background: #5f666d;       /* Darker gray on hover */
+}
+
+/* Check button specific styles */
+.buttons .check-word {
+  background: #006600;       /* Blue color */
+}
+.buttons .check-word:hover {
+  background: #004d00;       /* Darker blue on hover */
+}
+
+/* Responsive styles for smaller screens (max-width: 470px) */
+@media screen and (max-width: 470px) {
+  /* Smaller heading */
+  .container h2{
+    font-size: 22px;
+    padding: 13px 20px;
+  }
+  
+  /* Adjust word display */
+  .content .word{
+    font-size: 30px;
+    letter-spacing: 20px;
+    margin-right: -20px;
+  }
+  
+  /* Adjust content margins */
+  .container .content{
+    margin: 20px 20px 30px;
+  }
+  
+  /* Smaller detail text */
+  .details p{
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  /* Smaller input field */
+  .content input{
+    height: 55px;
+    font-size: 17px;
+  }
+  
+  /* Adjust buttons */
+  .buttons button{
+    padding: 14px 0;
+    font-size: 16px;
+    width: calc(100% / 2 - 7px); /* Adjust width for smaller gap */
+  }
+}
+
+/* Update background for better contrast and visual appeal */
+body {
+  background: linear-gradient(135deg, #000099, #4B59C5); /* Smoother gradient */
+}
+
+/* Make container a bit wider and softer rounded */
+.container {
+  width: 480px;
+  border-radius: 10px;
+}
+
+/* Add slight spacing under heading for breathing room */
+.container h2 {
+  margin-bottom: 10px;
+}
+
+/* Improve typography spacing */
+.content .word {
+  font-size: 36px;
+  letter-spacing: 20px;
+  margin-right: -20px;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+/* Input field softer border and focus color */
+.content input {
+  border: 2px solid #dcdcdc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content input:focus {
+  border-color: #5372F0;
+  box-shadow: 0 0 8px rgba(83, 114, 240, 0.3);
+}
+
+.game-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.stats {
+    display: flex;
+    gap: 20px;
+}
+.stats p {
+    margin: 0;
+    font-weight: bold;
+}
+
